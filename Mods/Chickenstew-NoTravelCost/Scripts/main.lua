@@ -28,7 +28,7 @@ local function SetMapcost()
 	for Index, MapHelperInstance in pairs(New_MIAChangeMapHelperComponent) do
 		
 		MapHelperInstance.MapChangeCost.Life = 0
-		MapHelperInstance.MapChangeCost.Satiety = 99
+		MapHelperInstance.MapChangeCost.Satiety = 0
 		MapHelperInstance.MapChangeCost.bIsOK = true
 	end
 end
