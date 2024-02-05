@@ -9,7 +9,7 @@ Allows travel even if Satiety is 0.
 
 ## Todo Features
 
-- [ ] Make fast travel from Orth's layer selection not deplete anyhting
+- [ ] Make fast travel from Orth's layer selection not deplete anything
 - [ ] Make the info plates reflect no cost
 
 > [!WARNING]
