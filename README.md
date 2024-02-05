@@ -17,7 +17,7 @@ Allows travel even if Satiety is 0.
 
 ## Installation
 
-Get and install this mod via Nexus Mods and Vortex (guide also in the link): LINK TO NEXUS PAGE
+Get and install this mod via Nexus Mods and Vortex. [Version 0.0.3](https://www.nexusmods.com/madeinabyssbinarystarfallingintodarkness/mods/8)
 
 ## Manual / Advanced Installation
 
