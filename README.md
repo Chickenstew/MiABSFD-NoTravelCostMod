@@ -5,6 +5,12 @@ Prevents Life and Satiety from being depleted when zoning via map transitions an
 
 Allows travel even if Satiety is 0.
 
+**NOTE:** Transition plates will still depict that there is a cost or that travel is not possible. This is only a display issue.
+
+## Todo Features
+
+- [ ] Make the info plates reflect no cost
+
 > [!WARNING]
 > This mod is experimental and might cause your game to crash during gameplay.
 
