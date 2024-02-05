@@ -22,34 +22,20 @@ local function HookMapFastTravelLayout(New_MapFastTravelLayout)
 end
 NotifyOnNewObject("WBP_MapFastTravelLayout_C", HookMapFastTravelLayout)
 
-local function UpdateMapTravel(New_MIAChangeMapHelperComponent)
-	if New_MIAChangeMapHelperComponent == nil then
-		Utils.Log("MIAChangeMapHelperComponen was nil")
-		return 
-	end
-	
-	for Index, MapHelperInstance in pairs(New_MIAChangeMapHelperComponent) do
-		MapHelperInstance.MapChangeCost.Life = 0
-		MapHelperInstance.MapChangeCost.Satiety = 0
-		MapHelperInstance.MapChangeCost.bIsOK = true
-	end
-end
-
-RegisterHook("/Script/MadeInAbyss.MIAChangeMapHelperComponent:MoveDecided", function()
-	New_MIAChangeMapHelperComponent = FindAllOf("MIAChangeMapHelperComponent")
-	UpdateMapTravel(New_MIAChangeMapHelperComponent)
-end)
-
 local function SetMapcost()
 	New_MIAChangeMapHelperComponent = FindAllOf("MIAChangeMapHelperComponent")
 
 	for Index, MapHelperInstance in pairs(New_MIAChangeMapHelperComponent) do
 		
 		MapHelperInstance.MapChangeCost.Life = 0
-		MapHelperInstance.MapChangeCost.Satiety = 0
+		MapHelperInstance.MapChangeCost.Satiety = 99
 		MapHelperInstance.MapChangeCost.bIsOK = true
 	end
 end
+
+RegisterHook("/Script/MadeInAbyss.MIAChangeMapHelperComponent:MoveDecided", function()
+	SetMapcost()
+end)
 
 RegisterHook("/Script/Engine.PlayerController:ClientRestart", function()
 	Utils.RegisterHookOnce("/Game/MadeInAbyss/UI/Menu/Map/WBP_MapFastTravelLayout.WBP_MapFastTravelLayout_C:Update", function(Context)
